@@ -14,7 +14,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<title>SHOP MALL</title>
+<title>ShopeeFake</title>
+<link rel="icon" type="image/x-icon" href="<%=request.getContextPath()%>/style/assets/images/logoShop/LogoWeb.png">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
@@ -261,10 +262,13 @@ input:focus+label, input:valid+label, textarea:focus+label, textarea:valid+label
 			<a href="<%=request.getContextPath()%>/Trangchu/SignUpIn">Đăng
 				Xuất</a>
 		</button>
+		<button style="width: 100px; height: 40px">
+        <a href="<%=request.getContextPath()%>/Trangchu/printf2PDF">In</a>
+    </button>
 	</div>
 	<div class="container py-5" style="max-width: 100%;">
 		<header class="text-center text-white">
-			<h1 class="display-4">Product Data Table</h1>
+			<h1 class="display-4">Bảng sản phẩm</h1>
 		</header>
 		<div class="row py-5">
 			<div class="col-lg-10 mx-auto">
@@ -382,25 +386,25 @@ input:focus+label, input:valid+label, textarea:focus+label, textarea:valid+label
 					<input type="text" name="shopID" style="display: none"
 						value="<%=shop.getId()%>"></input>
 					<div class="form-item">
-						<label>Name Product</label> <input id="update-product" type="text"
+						<label>Tên sản phẩm</label> <input id="update-product" type="text"
 							name="product">
 					</div>
 					<div class="form-item">
-						<label>Price Origin</label> <input id="update-priceO" type="text"
+						<label>Giá gốc</label> <input id="update-priceO" type="text"
 							name="priceO">
 					</div>
 					<div class="form-item">
-						<label>Price Sale</label> <input id="update-priceS" type="text"
+						<label>Giá sale</label> <input id="update-priceS" type="text"
 							name="priceS">
 					</div>
 					<div class="form-item">
-						<label>URL image</label> <input id="update-url" type="text"
+						<label>URL</label> <input id="update-url" type="text"
 							name="url">
 					</div>
 					<input id="update-category" type="text" name="category0-ID"
 						style="display: none">
 					<div class="form-item">
-						<label>Category</label> <select id="select-state"
+						<label>Loại sản phẩm</label> <select id="select-state"
 							name="categoryID" placeholder="Pick a state...">
 							<%
 							for (Category category : categoryList) {
@@ -411,7 +415,7 @@ input:focus+label, input:valid+label, textarea:focus+label, textarea:valid+label
 							%>
 						</select>
 					</div>
-					<button class="submit-btn">Update</button>
+					<button class="submit-btn">Cập nhật</button>
 				</form>
 			</div>
 		</div>

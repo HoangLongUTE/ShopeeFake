@@ -13,7 +13,7 @@
 	href="<%=request.getContextPath()%>/style/assets/css/bullma_css.css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="icon" type="image/x-icon" href="<%=request.getContextPath()%>/style/assets/images/logoShop/LogoWeb.png">
+
 <style>
 .navbar {
 	font-size: large;
@@ -126,7 +126,7 @@ if (accesser != null && accesser.equals("user")) {
 <nav class="navbar " style="background-color: #ee4d2d;">
 	<div class="navbar-brand">
 		<a class="navbar-item" href="<%=request.getContextPath()%>/Trangchu"
-			style="color: #FFFF; font-size: 18px"> Trang chủ </a>
+			style="color: #FFFF; font-size: 18px">ShopeeFake</a>
 
 		<div class="navbar-burger burger" data-target="navMenubd-example">
 			<span></span> <span></span> <span></span>
@@ -201,7 +201,7 @@ if (accesser != null && accesser.equals("user")) {
 										aria-hidden="true"></i></strong>
 
 									<p style="padding-left: 20px; font-size: large;">
-										0111244899</p>
+										0917941581(zalo)</p>
 
 								</div>
 							</div>
@@ -233,27 +233,7 @@ if (accesser != null && accesser.equals("user")) {
 
 			<div class="navbar-item">
 				<div class="field is-grouped">
-					<p class="control">
-						<a style="color: #ee4d2d !important;" class="bd-tw-button button"
-							data-social-network="Twitter" data-social-action="tweet"
-							data-social-target="" target="_blank"
-							href="<%=client != null ? request.getContextPath() + "/Trangchu/Payment" : "https://twitter.com"%>">
-							<span class="icon"> <%
- if (client != null)
- 	out.print("<i class=\"fa fa-money\" aria-hidden=\"true\"></i>");
- else
- 	out.print("<i class=\"fa fa-twitter\"></i>");
- %>
-						</span> <span> <%
- if (client != null)
- 	out.print(Product.formMoney(client.getMoney()) + "đ");
- else
- 	out.print("Tweet");
- %>
-						</span>
-						</a>
-
-					</p>
+					
 					<p class="control ">
 						<a class="button is-primary account"
 							href="

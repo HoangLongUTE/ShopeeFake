@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>ShopeeFake</title>
+<link rel="icon" type="image/x-icon" href="<%=request.getContextPath()%>/style/assets/images/logoShop/LogoWeb.png">
 </head>
 <body>
 <% response.sendRedirect(request.getContextPath()+"/Trangchu"); %>

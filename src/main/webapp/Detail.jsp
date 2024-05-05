@@ -8,6 +8,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>ShopeeFake</title>
+<link rel="icon" type="image/x-icon" href="<%=request.getContextPath()%>/style/assets/images/logoShop/LogoWeb.png">
 <link
 	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
 	rel="stylesheet" id="bootstrap-css">

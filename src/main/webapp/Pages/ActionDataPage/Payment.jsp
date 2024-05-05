@@ -5,7 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <link href="<%=request.getContextPath() %>/style/assets/css/stylePagePayment.css" rel="stylesheet" />
-<title>Shop MALL</title>
+<title>ShopeeFake</title>
+<link rel="icon" type="image/x-icon" href="<%=request.getContextPath()%>/style/assets/images/logoShop/LogoWeb.png">
 <link href="https://fonts.googleapis.com/css?family=Raleway|Rock+Salt|Source+Code+Pro:300,400,600" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/imask/3.4.0/imask.min.js"></script>

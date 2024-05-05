@@ -6,7 +6,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Profile</title>
+<title>ShopeeFake</title>
+<link rel="icon" type="image/x-icon" href="<%=request.getContextPath()%>/style/assets/images/logoShop/LogoWeb.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <style type="text/css">
 body {
@@ -91,9 +92,9 @@ body {
 									alt="avatar" class="rounded-circle" width="150">
 								<div class="mt-3">
 									<h4><%=client.getFullName() %></h4>
-									<p class="text-muted font-size-sm">Số dư <%=Product.formMoney(client.getMoney()) %> VNĐ</p>
-									<a class="btn btn-primary" href="<%=request.getContextPath() %>/Trangchu">Home</a>
-									<a class="btn btn-outline-primary" href="<%=request.getContextPath() %>/Trangchu/SignUpIn">Logout</a>
+									
+									<a class="btn btn-primary" href="<%=request.getContextPath() %>/Trangchu">Trang chủ</a>
+									<a class="btn btn-outline-primary" href="<%=request.getContextPath() %>/Trangchu/SignUpIn">Đăng xuất</a>
 								</div>
 							</div>
 						</div>
@@ -104,21 +105,22 @@ body {
 						<div class="card-body">
 							<div class="row">
 								<div class="col-sm-3">
-									<h6 class="mb-0">Full Name</h6>
+									<h6 class="mb-0">Tên</h6>
+								</div>
+								
+								<div class="col-sm-9 text-secondary"><%=client.getUser() %></div>
+							</div>
+							<hr>
+							<div class="row">
+								<div class="col-sm-3">
+									<h6 class="mb-0">Địa chỉ</h6>
 								</div>
 								<div class="col-sm-9 text-secondary"><%=client.getAddress() %></div>
 							</div>
 							<hr>
 							<div class="row">
 								<div class="col-sm-3">
-									<h6 class="mb-0">Username</h6>
-								</div>
-								<div class="col-sm-9 text-secondary"><%=client.getUser() %></div>
-							</div>
-							<hr>
-							<div class="row">
-								<div class="col-sm-3">
-									<h6 class="mb-0">Phone</h6>
+									<h6 class="mb-0">Số điện thoại</h6>
 								</div>
 								<div class="col-sm-9 text-secondary"><%=client.getPhone() %></div>
 							</div>

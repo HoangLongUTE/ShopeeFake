@@ -136,10 +136,15 @@ public class ProductDAO {
 			int productId) {
 		try {
 			Connection connection = ConnectionSQL.getConnection();
-			Statement stm = connection.createStatement();
-			stm.executeUpdate(String.format(
-					"UPDATE %s SET product=\"%s\", priceO=\"%s\", priceS=\"%s\", img=\"%s\", category_categoryID=%d WHERE productID=%d;",
-					product, oPrice, sPrice, urlImage, categoryId, productId));
+			PreparedStatement stm = connection.prepareStatement(
+					"UPDATE product SET product=?, priceO=?, priceS=?, img=?, category_categoryID=? WHERE productID=?");
+			stm.setString(1, product);
+			stm.setString(2, oPrice);
+			stm.setString(3, sPrice);
+			stm.setString(4, urlImage);
+			stm.setInt(5, categoryId);
+			stm.setInt(6, productId);
+			stm.executeUpdate();
 			connection.close();
 			System.out.println("Update a product in database successed!");
 		} catch (SQLException e) {

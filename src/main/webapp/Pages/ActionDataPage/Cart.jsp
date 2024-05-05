@@ -11,7 +11,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>ShopeeFake</title>
+<link rel="icon" type="image/x-icon" href="<%=request.getContextPath()%>/style/assets/images/logoShop/LogoWeb.png">
 <link
 	href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800"
 	rel="stylesheet">
@@ -44,8 +45,7 @@
 	<header id="site-header">
 		<div class="container">
 			<h1>
-				Shopping cart <span>[</span> <em><a href="" target="_blank">CodePen
-						Challange</a></em> <span class="last-span is-open">]</span>
+				Giỏ hàng 
 			</h1>
 		</div>
 	</header>
@@ -66,7 +66,7 @@
 						href="GioHang?<%="cartID=" + cart.getCartID() + "&actionCart=remove"%>"
 						class="remove"> <img src="<%=product.getUrl()%>" alt="">
 
-						<h3>Remove product</h3>
+						<h3>Xóa sản phẩm</h3>
 					</a>
 				</header>
 
@@ -109,28 +109,28 @@
 		<div class="container clearfix">
 			<div class="left">
 				<h2 class="subtotal">
-					Subtotal: <span><%=Product.formMoney(Long.toString(subtotal))%></span>đ
+					Tổng: <span><%=Product.formMoney(Long.toString(subtotal))%></span>đ
 				</h2>
 				<h3 class="tax">
-					Taxes (2%): <span> <%
+					Thuế (2%): <span> <%
  long tax = Math.round((subtotal * 0.02));
  out.print(Product.formMoney(Long.toString(tax)));
  %>
 					</span>đ
 				</h3>
 				<h3 class="shipping">
-					Shipping: <span>20.000</span>đ
+					Phí ship: <span>20.000</span>đ
 				</h3>
 			</div>
 
 			<div class="right">
 				<h1 class="total">
-					Total: <span><%=subtotal != 0 ? Product.formMoney(Long.toString(tax + subtotal + 20000)) : 0%></span>đ
+					Thanh toán: <span><%=subtotal != 0 ? Product.formMoney(Long.toString(tax + subtotal + 20000)) : 0%></span>đ
 				</h1>
 				<%
 				if (subtotal != 0) {
 					if (subtotal + tax + 20000 <= Long.parseLong(client.getMoney()))
-						out.print("<button class=\"btn btn-success\" style=\"width: 100%\">Checkout</button>");
+						out.print("<button class=\"btn btn-success\" style=\"width: 100%\">Xác nhận thanh toán</button>");
 					else
 						out.print("<button class=\"btn btn-eror\" style=\"width: 100%\">Checkout</button>");
 				} else

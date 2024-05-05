@@ -6,8 +6,8 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 <link rel="stylesheet" href="<%=request.getContextPath() %>/style/assets/css/stylePageSignIN_UP.css" />
-
-<title>Shop</title>
+<title>ShopeeFake</title>
+<link rel="icon" type="image/x-icon" href="<%=request.getContextPath()%>/style/assets/images/logoShop/LogoWeb.png">
 </head>
 <body>
 	<%
@@ -16,8 +16,8 @@
 	%>
 	
   <div class="function">    
-    <button id="in">Login</button>
-    <button id="up">Sign up</button>
+    <button id="in">Đăng nhập</button>
+    <button id="up">Đăng ký</button>
   </div>
   <%if(eror!=null) out.print(eror);%>
     <a href="<%=request.getContextPath() %>/Trangchu">← Trở về trang chủ</a>
@@ -25,53 +25,53 @@
         <div class="form-container sign-up-container">
             <h1 class="header--iconclose js--close--pay" style="padding: 16px;position: absolute;top: 0;right: 0;cursor: pointer;"><i class="fa fa-times" style="font-size: 18px;" ></i></h1>
             <form method="post">
-                <h1>Sign Up For Shop</h1>
+                <h1>Đăng ký với</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook"></i></a>
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <input type="text" style="display: none" name="account" value="shop"/>
-                <span>or use your email for registration</span>
+                <span>hoặc sử dụng email</span>
                 <input type="text" placeholder="User" name="user"required/>
                 <input type="password" placeholder="Password" name="password"required/>
                 <input type="text" placeholder="Name Shop" name="nameShop"required/>
                 <input type="text" placeholder="URL AVATAR" name="urlAvatar"required/>
-                <button>Sign Up</button>
+                <button>Đăng ký</button>
             </form>
         </div>
         <div class="form-container sign-in-container">
             <form method="post" >
-                <h1>Sign Up For Client</h1>
+                <h1>Đăng ký với</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-                <span>or use your account</span>
+                <span>hoặc sử dụng tài khoản</span>
                 <input type="text" style="display: none" name="account" value="client"/>
-                <input type="text" placeholder="User" name="user"required/>
-                <input type="password" placeholder="Password" name="password"required/>
-                <input type="text" placeholder="Fullname" name="fullName"required/>
-                <input type="text" placeholder="Address" name="address"required/>
-                <input type="text" placeholder="Phone" name="phone" required/>
-                <div >Birthday </div>
+                <input type="text" placeholder="Tên" name="user"required/>
+                <input type="password" placeholder="Mật khẩu" name="password"required/>
+                <input type="text" placeholder="Tên đầy đủ" name="fullName"required/>
+                <input type="text" placeholder="Địa chỉ" name="address"required/>
+                <input type="text" placeholder="Số điện thoại" name="phone" required/>
+                <div >Ngày sinh</div>
                 <input type="date" placeholder="Birthday" name="birthday" style="margin-bottom: 20px"required/>
                 
-                <button>Sign Up</button>
+                <button>Đăng ký</button>
             </form>
         </div>
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
-                    <h1>Welcome Back!</h1>
-                    <p>Enter your personal details and start journey with us</p>
-                    <button class="ghost" id="signIn">Sign Up User</button>
+                    <h1>Chào mừng quay trở lại!</h1>
+                    <p>Nhập thông tin của bạn và bắt đầu mua sắm thôi</p>
+                    <button class="ghost" id="signIn">Đăng ký cho khách hàng</button>
                 </div>
                 <div class="overlay-panel overlay-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Enter your personal details and start journey with us</p>
-                    <button class="ghost" id="signUp">Sign Up Shop</button>
+                    <h1>Xin chào!</h1>
+                    <p>Nhập thông tin của bạn và bắt đầu mua sắm thôi</p>
+                    <button class="ghost" id="signUp">Đăng ký cho shop</button>
                 </div>
             </div>
         </div>
@@ -80,17 +80,17 @@
         
       <div class="form-container sign-in-container" style="width: 100%;">
           <form method="post" >
-              <h1>Sign Up For Client</h1>
+              <h1>Đăng nhập với</h1>
               <div class="social-container">
                   <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                   <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                   <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
               </div>
-              <span>or use your account</span>
+              <span>hoặc sử dụng tài khoản</span>
               <input type="text" style="display: none" name="account" value="login"/>
               <input type="text" placeholder="User" name="user" required/>
               <input type="password" placeholder="Password" name="password" required/>
-              <button>Sign In</button>
+              <button>Đăng nhập</button>
           </form>
       </div>
   </div>
